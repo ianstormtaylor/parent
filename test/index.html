@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="mocha.css" />
+  </head>
+  <body>
+    <div id="mocha">
+      <span id="one"></span>
+      <div id="two"></div>
+      <div id="three"></div>
+    </div>
+    <script src="mocha.js"></script>
+    <script>mocha.setup({ui : 'bdd'})</script>
+    <script src="../build/build.js"></script>
+    <script src="tests.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>
