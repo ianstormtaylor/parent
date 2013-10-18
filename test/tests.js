@@ -1,19 +1,16 @@
-describe('previous-sibling', function () {
 
-  var assert = require('assert')
-    , previous = require('previous-sibling')
-    , div = document.getElementById('three');
+describe('parent', function () {
 
-  it('should return the previous sibling', function () {
-    assert('two' === previous(div).id);
+  var assert = require('assert');
+  var parent = require('parent');
+  var span = document.getElementById('three');
+
+  it('should return the parent', function () {
+    assert('two' === parent(span).id);
   });
 
   it('should filter by a selector', function () {
-    assert('one' === previous(div, 'span').id);
-  });
-
-  it('should return null on only child', function () {
-    assert(null === previous(document.head));
+    assert('one' === parent(span, 'section').id);
   });
 
 });
